@@ -18,6 +18,8 @@ class AppUpdateDataBaseState extends AppStates {}
 
 class AppDeleteDataBaseState extends AppStates {}
 
+class AppChangeImportantList extends AppStates {}
+
 class AppErrorDataBaseState extends AppStates {
   final String error;
 

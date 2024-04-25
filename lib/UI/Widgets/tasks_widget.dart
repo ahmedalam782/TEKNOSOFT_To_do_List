@@ -116,8 +116,9 @@ class TasksWidgets extends StatelessWidget {
             ),
             IconButton(
               onPressed: () {
+                AppCubit.get(context).changeImportantList();
                 AppCubit.get(context).updateDatabase(
-                  important: 'true',
+                  important: '${AppCubit.get(context).isImportant}',
                   id: tasks['id'],
                 );
               },

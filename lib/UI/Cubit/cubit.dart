@@ -27,11 +27,17 @@ class AppCubit extends Cubit<AppStates> {
   late Database database;
   String? selectedValue = "Personal";
   bool floatClick = false;
+  bool isImportant = false;
   IconData icon = Icons.edit;
 
   void changeValueDropDown(String? value) {
     selectedValue = value;
     emit(ChangeValueOfDropDown());
+  }
+
+  void changeImportantList() {
+    isImportant = !isImportant;
+    emit(AppChangeImportantList());
   }
 
   void changeBottomSheetState(
